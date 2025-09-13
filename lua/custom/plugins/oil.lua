@@ -4,7 +4,11 @@ return {
   ---@type oil.SetupOpts
   -- to open oil with - as shortcut
   vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }),
-  opts = {},
+  opts = {
+    view_options = {
+      show_hidden = true,
+    },
+  },
   -- Optional dependencies
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
